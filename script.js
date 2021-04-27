@@ -19,8 +19,8 @@ window.addEventListener('mousemove', function (e) {
     mouse.y = event.y;
 });
 
-ctx.fillStyle = 'white';
-ctx.font = '28px Verdana';
+ctx.fillStyle = '#FCFFE6';
+ctx.font = '26px Verdana';
 //2nd = x, 3rd = y coordinate, 4th = optional, can define max width
 ctx.fillText('Text', 30, 40);
 ctx.fillText('Animation', 0, 75);
@@ -37,7 +37,7 @@ class Particle {
     }
 
     draw() {
-        ctx.fillStyle = 'white';
+        ctx.fillStyle = '#FCFFE6';
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
         ctx.closePath();
@@ -73,7 +73,7 @@ class Particle {
     }
 }
 
-console.log(textCoordinates)
+// console.log(textCoordinates)
 function init() {
     particleArray = [];
 
@@ -115,7 +115,7 @@ function connect() {
 
             if (distance < 30) {
                 opacityValue = 1 - (distance / 50);
-                ctx.strokeStyle = 'rgba(255, 255, 255,' + opacityValue + ')';
+                ctx.strokeStyle = 'rgba(253, 255, 242,' + opacityValue + ')';
                 ctx.lineWidth = 2;
                 ctx.beginPath();
                 ctx.moveTo(particleArray[a].x, particleArray[a].y);
